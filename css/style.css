@@ -1,0 +1,295 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-areas: "header header header" "banner banner banner" "main main main" "footer footer footer";
+}
+header {
+  position: fixed;
+  width: 100%;
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  z-index: 100;
+}
+header span {
+  color: crimson;
+  text-shadow: 8px 12px 2rem crimson;
+}
+header .icone-lista {
+  display: flex;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: center;
+  color: white;
+}
+header .icone-fecha-lista {
+  display: none;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: center;
+  color: white;
+}
+header .lista {
+  width: 50%;
+  display: flex;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+header ul li a:hover {
+  color: rgb(193, 193, 193);
+}
+header ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -1vh;
+  left: 0;
+  background-color: crimson;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+header ul li a:hover::before {
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+.menu {
+  grid-area: menu;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  background-color: #000000;
+  width: 100%;
+  top: 8vh;
+}
+@media (min-width: 1040px) {
+  header .icone-lista {
+    display: none;
+  }
+  header .icone-fecha-lista {
+    display: none;
+  }
+}
+
+@media (max-width: 1040px) {
+  .container {
+    grid-template-areas: "header header header" "menu menu menu" "banner banner banner" "main main main" "footer footer footer";
+    .container .menu {
+      grid-area: menu;
+      background-color: #000000;
+      width: 50%;
+      height: 50%;
+      left: 50%;
+      border-radius: 0 0 15px 15px;
+    }
+    .menu .lista-oculta {
+      width: 100%;
+    }
+    .menu ul {
+      display: block;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      padding: 0;
+      text-align: center;
+    }
+    .menu ul li {
+      margin-top: 30px;
+      border-bottom: crimson;
+      padding: 60px;
+    }
+    .menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .menu ul li a:hover {
+      color: rgb(193, 193, 193);
+    }
+    .menu ul li a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: -1vh;
+      left: 0;
+      background-color: crimson;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+    }
+    .menu ul li a:hover::before {
+      transform: scaleX(1);
+      visibility: visible;
+    }
+    .menu ul li a:hover::before,
+    .menu ul li a.active::before {
+      transform: scaleX(1);
+      visibility: visible;
+    }
+    header .icone-lista {
+      display: flex;
+    }
+    header .lista {
+      display: none;
+    }
+  }
+  @media (min-width: 1041px) {
+    .menu ul {
+      display: none;
+    }
+  }
+}
+.banner {
+  position: relative;
+  top: 12vh;
+  grid-area: banner;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+main {
+  grid-area: main;
+  position: relative;
+  height: auto; /* Altura do main */
+  top: 10vh;
+}
+
+/* Seções dentro do main */
+main section {
+  padding: 0; /* Sem preenchimento */
+  width: 100%; /* Largura total */
+  text-align: center;
+}
+
+main section h2 {
+  padding: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Estilos da lista de jogos */
+main section ul {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento */
+  display: flex; /* Flexbox para disposição */
+  justify-content: space-around; /* Espaçamento igual entre itens */
+  width: 100%;
+}
+
+main section ul li {
+  display: block;
+  text-align: center; /* Centraliza o texto */
+  width: 25%; /* Largura dos itens da lista */
+  box-shadow: 0 4px 10px rgb(63, 63, 63);
+  padding: 8px;
+}
+
+/* Estilos das imagens dos jogos */
+main section ul li img {
+  width: 100%; /* Largura total do item */
+  height: 100px; /* Altura fixa */
+  object-fit: cover;
+}
+main section ul li .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Estilos dos botões */
+main section ul li button {
+  position: relative; /* Posição relativa para estilo */
+  border: none; /* Remove bordas */
+  border-radius: 26px; /* Bordas arredondadas */ /* Largura do botão */ /* Preenchimento interno */
+  background-color: #115662; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  width: 70%;
+  height: 30px;
+  font-size: 16px;
+  transition: 0.6s;
+}
+
+main section ul li .btnJogar:hover {
+  background-color: white;
+  box-shadow: 0 0 0.8em 0.4em #115662;
+  width: 55%;
+  height: 25px;
+}
+
+main section ul li .btnDow {
+  background-color: transparent;
+  width: auto;
+  color: #115662;
+  font-size: 26px; /* Espaçamento acima do botão de download */
+  transition: 0.3s;
+}
+
+main section ul li .btnDow:hover {
+  transform: translateY(7px);
+}
+
+/* Estilos do link dentro do botão */
+main section ul li button a {
+  text-decoration: none; /* Remove sublinhado do link */
+  color: white; /* Cor do texto do link */
+}
+
+main section ul li button a:hover {
+  font-size: 13px;
+  font-weight: 900;
+  color: #115662;
+  transition: 0.2s;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  grid-area: footer;
+  top: 15vh;
+  background-color: #000000;
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer span {
+  color: crimson;
+  text-shadow: 8px 12px 2rem crimson;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #115662;
+}

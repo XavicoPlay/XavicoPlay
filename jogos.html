@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/jogos.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/busca.js" defer></script>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
+    <title>Biblioteca</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <h1>XAVICO <span>PLAY</span></h1>
+        <div class="lista">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+          </ul>
+        </div>
+
+        <div class="icone-lista" onclick="mostraIconeLista()">
+          <i class="bi bi-list"></i>
+        </div>
+        <div class="icone-fecha-lista" onclick="fechaLista()">
+          <i class="bi bi-x"></i>
+        </div>
+      </header>
+      <div class="menu">
+        <div class="lista-oculta">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="opcoes" id="opcoes">
+        <ul>
+          <li>
+            <button id="acao" onclick="buscaAcao()">
+              <a href="#acao2">Ação</a>
+            </button>
+          </li>
+          <li>
+            <button id="rpg" onclick="buscaRpg()">
+              <a href="#rpg2">RPG</a>
+            </button>
+          </li>
+          <li>
+            <button id="corrida" onclick=" buscaCorrida()">
+              <a href="#corrida2">Corrida</a>
+            </button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button id="esportes" onclick="buscaEsportes()">
+              <a href="#esporte2">Esportes</a>
+            </button>
+          </li>
+          <li>
+            <button id="quebra-cabeca" onclick="buscaEstrategia()">
+              <a href="#estrategia2">Estratégia</a>
+            </button>
+          </li>
+          <li>
+            <button id="retro" onclick="buscaRetro()">
+              <a href="#retro2">Retro</a>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <main>
+        <section id="acao1">
+          <h2>Ação</h2>
+          <ul>
+            <!-- Item de jogo -->
+            <li>
+              <img
+                src="img/JonasChuter.jpeg"
+                alt="Imagem do Jogo 1"
+              />
+              <h3>Jonas Chuter</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/lspelek/jonasshooter/X9WEJSVP/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/JogoJose.jpg"
+                alt="Imagem do Jogo 2"
+              />
+              <h3>Lemmy Long Leg</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/JosecuJhenifer/lemmylongleg/XFHB89KA/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/ajudeovicente.jpg"
+                alt="Imagem do Jogo 3"
+              />
+              <h3>Ajude o Vicente</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/i/fabystafim/ajudeovicente/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="acao2" class="sectionEsconde">
+          <ul>
+            <!-- Item de jogo -->
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo 1"
+              />
+              <h3>JOGO 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <!-- Repetindo o mesmo formato para outros jogos -->
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo 2"
+              />
+              <h3>JOGO 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo 3"
+              />
+              <h3>JOGO 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>RPG</h2>
+          <ul>
+            <!-- Jogo do Mauricio-->
+            <li>
+              <img
+                src="img/jogoMauricio.jpg"
+                alt="Imagem do RPG 1"
+              />
+              <h3>The Alien</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/maumauskr/thejumpingalien/NWPH7EJA/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/jogoAirton.jpg"
+                alt="Imagem do RPG 2"
+              />
+              <h3>Se Salve!</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/Airton_games/antobliterator/JEYPATYP/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do RPG 3"
+              />
+              <h3>RPG 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="rpg2" class="sectionEsconde">
+          <ul>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do RPG 1"
+              />
+              <h3>RPG 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do RPG 2"
+              />
+              <h3>RPG 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do RPG 3"
+              />
+              <h3>RPG 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Corrida</h2>
+          <ul>
+            <li>
+              <img
+                src="img/Irati Run.jpg"
+                alt="Imagem do Jogo de Corrida 1"
+              />
+              <h3>Irati Run</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/kauaA/iratierun/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/corridaDoceXavier.jpg"
+                alt="Imagem do Jogo de Corrida 2"
+              />
+              <h3>Corrida Doce Xavier</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/lutaborda/racingdemo/FBDKPG5B/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Corrida 3"
+              />
+              <h3>Ajude a Tia Ana</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/i/bianca3333/ajudeatiaanacapturaroaluno2/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="corrida2" class="sectionEsconde">
+          <ul>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Corrida 1"
+              />
+              <h3>Corrida 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Corrida 2"
+              />
+              <h3>Corrida 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Corrida 3"
+              />
+              <h3>Corrida 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Esportes</h2>
+          <ul>
+            <li>
+              <!-- Jogo do João Guilherme = "Não seja Pego"-->
+              <img
+                src="img/naosejapego.jpeg"
+                alt="Imagem do Jogo de Esportes 1"
+              />
+              <h3>Não seja pego</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/jao_cae/hauntedmansion032/RJTB9ZNE/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <!-- Jogo do Pettenon = "Vicentão"-->
+            <li>
+              <img
+                src="img/vicentao.jpeg"
+                alt="Imagem do Jogo de Esportes 2"
+              />
+              <h3>Vicentão</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/gpettenonx/vicentao/SFB3E2PN/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/JogoNicoly.jpg"
+                alt="Imagem do Jogo de Esportes 3"
+              />
+              <h3>Fut Xavico</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/Nicoly/futxavico/H5WA6DB9/ ">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="esporte2" class="sectionEsconde">
+          <ul>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Esportes 1"
+              />
+              <h3>Esporte 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Esportes 2"
+              />
+              <h3>Esporte 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Jogo de Esportes 3"
+              />
+              <h3>Esporte 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Quebra-cabeça</h2>
+          <ul>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 1"
+              />
+              <h3>Quebra-cabeça 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 2"
+              />
+              <h3>Quebra-cabeça 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 3"
+              />
+              <h3>Quebra-cabeça 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="estrategia2" class="sectionEsconde">
+          <ul>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 1"
+              />
+              <h3>Quebra-cabeça 1</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 2"
+              />
+              <h3>Quebra-cabeça 2</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Quebra-cabeça 3"
+              />
+              <h3>Quebra-cabeça 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Retro</h2>
+          <ul>
+            <li>
+              <img
+                src="img/FNAFXavier.jpeg"
+                alt="Imagem do Retro 1"
+              />
+              <h3>FNAXavier</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/lutaborda/fsas_alpha/J9CYW2CS/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/cobrinha.jpg"
+                alt="Imagem do Retro 2"
+              />
+              <h3>Jogo da Cobrinha</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/Eduardo2604/cobrinha2/67KSTAR8/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/Kessia Bike.jpg"
+                alt="Imagem do Retro 3"
+              />
+              <h3>Kessia Bike</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/AndreKayki/dino/XYJY8JP5/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="retro2" class="sectionEsconde">
+          <ul>
+            <li>
+              <img
+                src="img/PingPong.jpg"
+                alt="Imagem do Retro 1"
+              />
+              <h3>Ping Pong</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.io/JonasM/pong/X3DM5CF9/">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="img/jogoDiogo.jpg"
+                alt="Imagem do Retro 2"
+              />
+              <h3>Destroir Bug's</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="https://microstudio.dev/dijin/asteroidsffa/APWJRBSB/?server">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+            <li>
+              <img
+                src="https://ogimg.infoglobo.com.br/in/23001849-c2f-667/FT1086A/INFOCHPDPICT000041975439.jpg"
+                alt="Imagem do Retro 3"
+              />
+              <h3>Retro 3</h3>
+              <div class="btns">
+                <button class="btnJogar"><a href="#">Jogar</a></button>
+                <button class="btnDow"><i class="bi bi-download"></i></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <ul>
+          <li>XAVICO <span>PLAY</span> &copy;</li>
+          <li>
+            <a
+              href="https://www.instagram.com/col.xavier.irati?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              ><i class="bi bi-instagram"></i><span>Instagram Xavier</span></a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
